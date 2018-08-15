@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>动态规划 | Hexo</title>
+  <title>Hello World | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="动态规划是一种使用动态思维思考问题的方式，对于可以使用动态规划的问题，其必定具有局部下的最优解可以达成全局下的最优解的特点，这类问题一般将局部下变量的变化情况称作为“状态”，并且在当前的状态下思考如何到达相邻状态（一般是单方向的），这种相邻状态之间的变化关系就是动态规划问题的“状态转移”，数学的表达上就是“状态转移方程”，利用状态转移方程以及问题的初始条件，模拟问题的发展逐渐递推后面的“状态”，最">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动态规划">
+<meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://yoursite.com/2018/08/15/hello-world/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="动态规划是一种使用动态思维思考问题的方式，对于可以使用动态规划的问题，其必定具有局部下的最优解可以达成全局下的最优解的特点，这类问题一般将局部下变量的变化情况称作为“状态”，并且在当前的状态下思考如何到达相邻状态（一般是单方向的），这种相邻状态之间的变化关系就是动态规划问题的“状态转移”，数学的表达上就是“状态转移方程”，利用状态转移方程以及问题的初始条件，模拟问题的发展逐渐递推后面的“状态”，最">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-15T15:26:08.327Z">
+<meta property="og:updated_time" content="2018-08-15T15:31:48.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动态规划">
-<meta name="twitter:description" content="动态规划是一种使用动态思维思考问题的方式，对于可以使用动态规划的问题，其必定具有局部下的最优解可以达成全局下的最优解的特点，这类问题一般将局部下变量的变化情况称作为“状态”，并且在当前的状态下思考如何到达相邻状态（一般是单方向的），这种相邻状态之间的变化关系就是动态规划问题的“状态转移”，数学的表达上就是“状态转移方程”，利用状态转移方程以及问题的初始条件，模拟问题的发展逐渐递推后面的“状态”，最">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -161,25 +161,28 @@
         
   
     <h1 class="article-title" itemprop="name">
-      动态规划
+      Hello World
     </h1>
   
 
         
         <a href="/2018/08/15/hello-world/" class="archive-article-date">
-  	<time datetime="2018-08-15T15:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
+  	<time datetime="2018-08-15T14:19:04.682Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>动态规划是一种使用动态思维思考问题的方式，对于可以使用动态规划的问题，其必定具有局部下的最优解可以达成全局下的最优解的特点，这类问题一般将局部下变量的变化情况称作为“状态”，并且在当前的状态下思考如何到达相邻状态（一般是单方向的），这种相邻状态之间的变化关系就是动态规划问题的“状态转移”，数学的表达上就是“状态转移方程”，利用状态转移方程以及问题的初始条件，模拟问题的发展逐渐递推后面的“状态”，最终得到所求问题的解。
-动态规划问题的种类很多，常见明显的动态规划问题有：
-</code></pre><p>##1.    背包问题</p>
-<p>###a.    0 – 1背包问题<br>问题：有N件物品和一个容量为V的背包（每种物品均只有一件），第i件物品的体积是V[i]，价值是P[i]，求解将哪些物品装入背包可使价值总和最大。</p>
-<p>首先分析问题的已知量，选定作为状态的变量。显然在问题的发展过程中，当前背包可用的容量、背包所装取物品的总价值、背包装取的物品是动态变化的，考虑到问题求解最优的总价值，将总价值作为状态转移的条件，而将其他两个变化条件作为状态量，则可以用二维数组dp[i][j]表示一个状态。<br>定义dp[i][j]表示“背包装取第i件物品，且剩余容量为j时物品的最大总价值”，考虑到使用“剩余容量”时初始条件的表达式为dp[0][V],不便于后续的状态递归，使用“已使用的背包容量”作为替换（f[i][j]意义的定义直接影响到状态转移方程的复杂程度），此时不难得问题的初始条件为<br>dp[0][0] = 0<br>定义了状态的含义以及获得初始条件的表达式后就可以思考状态转移的关系了。由于每件物品有且只有一件，因此每种物品只有装进和不装进两种状态，当背包装取第i件物品时，有以下几种情况：<br>(1)    将第i件物品放入背包。<br>若将其放入背包，由于dp[i][j]表示的是“背包装取第i件物品，且剩余容量为j时物品的最大总价值”，因此有关系：<br>dp[i][j] = dp[i - 1][j – V[i]] + P[i]<br>不难得，在此关系中必定要求：j &gt; V[i], 即已使用的背包容量j大于当前物品体积V[i]。<br>(2)    不将第i件物品放入背包。<br>此时有：<br>dp[i][j] = dp[i - 1][j]<br>        由上述讨论不难得相邻两状态之间的状态转移方程为：<br>dp[i][j] = max{ dp [i-1][j], dp [i - 1][j – V[i]] + P[i] }<br>        由此即可由初始条件和状态转移方程得出所求解。</p>
-<p>###b.    完全背包问题<br>问题：在n种物品中选取若干件（同一种物品可多次选取）放在空间为V的背包里，每种物品的体积为V1，V2，…, Vn，与之相对应的价值为P1, P2，…，Pn。求解怎么装物品可使背包里物品总价值最大</p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
 
@@ -273,20 +276,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/15/test/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/15/动态规划/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          test
+          动态规划
         
       </div>
     </a>
   
-  
-    <a href="/2018/08/15/动态规划/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">动态规划</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
