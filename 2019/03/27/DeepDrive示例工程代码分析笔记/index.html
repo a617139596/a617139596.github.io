@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Cmd-Markdown | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="DeepDrive示例UE4工程代码分析笔记插件外代码分析   插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：  定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs) 地图白天与黑夜时间光照控制与">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/Cmd-Markdown/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="DeepDrive示例UE4工程代码分析笔记插件外代码分析   插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：  定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs) 地图白天与黑夜时间光照控制与">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/4EFE973872374605B85986841CD69403">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/DA44A021C1284CB6ABD8C57D1CFF9959">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/D3D09717B7F74D2AB78D95DD1A453FE0">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/4D2CF2BCA4F54D5BBA9007DE51BE2704">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/9DDE615702A8454D98E710F1B6FD552A">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/E3EC136D0A714DFEA84B9F0408079E13">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/05D38CE9B279464080D7B5FAA1547B7E">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/6CA77544C7324B40AC625B369BDB4387">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/76DAA0F4ED5242489F74793ABD2CDA17">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/A14BA70EFD6A4A649F8A9E6AA34E7B53">
+<meta property="og:updated_time" content="2019-03-27T09:47:23.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="DeepDrive示例UE4工程代码分析笔记插件外代码分析   插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：  定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs) 地图白天与黑夜时间光照控制与">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/4EFE973872374605B85986841CD69403">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,60 +165,599 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-DeepDrive示例工程代码分析笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DeepDrive示例UE4工程代码分析笔记"><a href="#DeepDrive示例UE4工程代码分析笔记" class="headerlink" title="DeepDrive示例UE4工程代码分析笔记"></a>DeepDrive示例UE4工程代码分析笔记</h1><h2 id="插件外代码分析"><a href="#插件外代码分析" class="headerlink" title="插件外代码分析"></a>插件外代码分析</h2><p><img src="4EFE973872374605B85986841CD69403" alt="image">  </p>
+<p>插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：</p>
+<ul>
+<li>定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs)</li>
+<li>地图白天与黑夜时间光照控制与材质更新(CanyonDayNightGameMode)</li>
+<li>定义小车的各种状态信息与控制信息，以及小车在训练阶段的行为(Car)   </li>
+</ul>
+<p>下面记录了不同的头文件的简要分析。</p>
+<h3 id="1-DataTransferStructs"><a href="#1-DataTransferStructs" class="headerlink" title="1. DataTransferStructs"></a>1. DataTransferStructs</h3><p>在这个文件中定义了<code>FOutCameraData</code>以及<code>FUnrealToPythonDataLoad</code>两个结构体，前者定义了输出小车相机的属性，后者是从UE4传输给外部Python网络的信息属性，分别定义如下信息：</p>
+<h5 id="FOutCameraData"><a href="#FOutCameraData" class="headerlink" title="FOutCameraData"></a>FOutCameraData</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">变量名</th>
+<th style="text-align:center">值类型</th>
+<th style="text-align:center">说明 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Width</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">图像的宽度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Height</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">图像的高度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RGBArray</code></td>
+<td style="text-align:center">TArray<uint8></uint8></td>
+<td style="text-align:center">图像信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>FOV</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">视场角</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CameraMatrix</code></td>
+<td style="text-align:center">FMatrix</td>
+<td style="text-align:center">相机的变换矩阵</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CameraTypeName</code></td>
+<td style="text-align:center">FString</td>
+<td style="text-align:center">相机名</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CameraId</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">相机ID</td>
+</tr>
+</tbody>
+</table>
+<h5 id="FUnrealToPythonDataLoad"><a href="#FUnrealToPythonDataLoad" class="headerlink" title="FUnrealToPythonDataLoad"></a>FUnrealToPythonDataLoad</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">变量名</th>
+<th style="text-align:center">值类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>CameraDataArray</code></td>
+<td style="text-align:center">TArray<foutputcameradata></foutputcameradata></td>
+<td style="text-align:center">存储相机数据的数组</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Speed</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">小车的速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Velocity</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">小车各分量方向速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Position</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">小车的位置</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Rotation</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">小车的旋转</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Dimension</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">小车模型的尺寸</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_SurfaceTraction</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">路面摩擦系数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Acceleration</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">各分量方向的加速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RotationVelocity</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">各分量的旋转速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RotationAcceleration</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">各分量的旋转加速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ForwardVector</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">前方单位向量</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>UpVector</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">上方的单位向量</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RightVector</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">右方单位向量</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>TransformationMatrix</code></td>
+<td style="text-align:center">FMatrix</td>
+<td style="text-align:center">3维变换矩阵</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_MaxNumberOfPassengers</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">最大乘客数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_NumberOfPassengers</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">乘客数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_Reward</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">用于强化学习安全驾驶、速度和舒适性的反馈</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_bOnRoad</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否在道路上</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_TireHasBurst</code></td>
+<td style="text-align:center">TArray<bool></bool></td>
+<td style="text-align:center">用于控制四个轮胎的顺时针旋转</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_Comfort</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">在前向、侧向以及垂直方向的加速度，表明舒适度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_bInAir</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否腾空</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bIsGameDriving</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否AI控制</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bIsResetting</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否重置中</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_LastCollisionTime</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">上一次碰撞的时间戳</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_LastDroveAgainstTrafficTime</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">上一次在错误行车道上行驶的时间</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_LastDroveOffroadTime</code></td>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">上一次偏离道路的时间戳</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>AgentTime</code></td>
+<td style="text-align:center">double</td>
+<td style="text-align:center">游戏目前运行时间</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>EpisodeStartTime</code></td>
+<td style="text-align:center">double</td>
+<td style="text-align:center">游戏开始时间戳</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>EpisodeEndTime</code></td>
+<td style="text-align:center">double</td>
+<td style="text-align:center">游戏结束时间戳，运行时访问为-1</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>DistanceAlongPath</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">沿样条路径距起点的距离</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_DistanceFromLeftLane</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">距左车道距离</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Release2_DistanceFromRightLane</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">距右车道距离</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>在 <code>FUnrealToPythonDataLoad</code> 结构体中部分变量似乎并没有用到。</p>
+</blockquote>
+<hr>
+<h3 id="2-DeepDriveUtils"><a href="#2-DeepDriveUtils" class="headerlink" title="2. DeepDriveUtils"></a>2. DeepDriveUtils</h3><p>该类使用了C++11提供的均匀分布模板类<code>uniform_real_distribution</code>以及梅森旋转算法产生随机浮点数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#pragma once</span><br><span class="line">#include &lt;random&gt;</span><br><span class="line"></span><br><span class="line">//使用梅森旋转算法</span><br><span class="line">extern std::random_device DeepdriveUtilsRandomSeed;</span><br><span class="line">extern std::mt19937 DeepdriveUtilsRandomGenerator;</span><br><span class="line"></span><br><span class="line">//使用C++11提供的均匀分布模板类生成随机数</span><br><span class="line">static double RandomDouble(double start, double end)</span><br><span class="line">&#123;</span><br><span class="line">	//产生[start, end)范围间的均匀随机浮点数</span><br><span class="line">	std::uniform_real_distribution&lt;double&gt; uni(start, end);</span><br><span class="line">	auto random_double = uni(DeepdriveUtilsRandomGenerator);</span><br><span class="line">	return random_double;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="3-CanyonDayNightGameMode"><a href="#3-CanyonDayNightGameMode" class="headerlink" title="3. CanyonDayNightGameMode"></a>3. CanyonDayNightGameMode</h3><p>这个类主要完成的任务是为游戏场景中所有具有指定参数的材质创建一个动态材质，通过每帧查找场景中的每一个mesh是否在数组<code>ConvertedToDynamic</code>中来维护一个动态材质数组<code>BuildingDynamicMaterials</code>，并且为加入的动态材质随机生成更新阈值加入<code>BuildingDynamicThresholds</code>。之后计算当前时间周期来与各材质的更新阈值比较更新光照情况，同时动态更新材质。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">void CanyonDayNightGameMode::Tick(float DeltaTime)</span><br><span class="line">&#123;</span><br><span class="line">	Super::Tick(DeltaTime);</span><br><span class="line">    </span><br><span class="line">    //计算当前时间周期</span><br><span class="line">	float CycleTime = FMath::Abs(FMath::Sin(GetWorld()-&gt;GetTimeSeconds() / DayNightCycleSec * PI));</span><br><span class="line"></span><br><span class="line">	//设置获取动态材质的参数名</span><br><span class="line">	const FName BuildingMaterialParameterName = FName(TEXT(&quot;DayNightMultiplier&quot;));</span><br><span class="line">	const FName SkyMaterialParameterName = FName(TEXT(&quot;DayNightLerp&quot;));</span><br><span class="line"></span><br><span class="line">	for (TActorIterator&lt;AStaticMeshActor&gt; ActorItr(GetWorld()); ActorItr; ++ActorItr)</span><br><span class="line">	&#123;</span><br><span class="line">		AStaticMeshActor *Mesh = *ActorItr;</span><br><span class="line">		//如果没有在已经转换的动态材质列表中，则考虑添加</span><br><span class="line">		if (!ConvertedToDynamic.Contains(Mesh))</span><br><span class="line">		&#123;</span><br><span class="line">			auto StaticMeshComponent = Mesh-&gt;GetStaticMeshComponent();</span><br><span class="line">			</span><br><span class="line">		    ...</span><br><span class="line"></span><br><span class="line">			ConvertedToDynamic.Add(Mesh);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//根据当前的时间周期动态的设置动态材质列表中的材质</span><br><span class="line">	for (int MaterialIndex = 0; MaterialIndex &lt; BuildingDynamicMaterials.Num(); ++MaterialIndex)</span><br><span class="line">	&#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	for (auto Material : SkyDynamicMaterials)</span><br><span class="line">	&#123;</span><br><span class="line">		Material-&gt;SetScalarParameterValue(SkyMaterialParameterName, CycleTime);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//设置天空光源方向</span><br><span class="line">	for (TActorIterator&lt;ADirectionalLight&gt; ActorItr(GetWorld()); ActorItr; ++ActorItr)</span><br><span class="line">	&#123;</span><br><span class="line">		auto LightActor = *ActorItr;</span><br><span class="line">		LightActor-&gt;SetActorRotation(FRotator(-109.f, GetWorld()-&gt;GetTimeSeconds() / DayNightCycleSec * 180.f + 270.f, 150.f));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	for (TActorIterator&lt;ASpotLight&gt; ActorItr(GetWorld()); ActorItr; ++ActorItr)</span><br><span class="line">	&#123;</span><br><span class="line">		auto SpotLightActor = *ActorItr;</span><br><span class="line">		SpotLightActor-&gt;SetEnabled(CycleTime &gt; 0.5);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中当前所处的时间周期计算公式为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CycleTime = |sin(\frac&#123;WorldTime * PI&#125;&#123;DayNightCycleSec&#125;)|</span><br></pre></td></tr></table></figure></p>
+<p>光照方向的Pitch轴更新公式为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NewPitch = \frac&#123;WorldTime&#125;&#123;DayNightCycleSec&#125;*180+270</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="4-SplineTrajectory"><a href="#4-SplineTrajectory" class="headerlink" title="4. SplineTrajectory"></a>4. SplineTrajectory</h3><p>此类仅仅只是封装了一下UE4内部的样条组件以便于在Car类中更好的访问，在此不做过多解释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//初始化函数</span><br><span class="line">ASplineTrajectory::ASplineTrajectory()</span><br><span class="line">&#123;</span><br><span class="line">	PrimaryActorTick.bCanEverTick = true;</span><br><span class="line"></span><br><span class="line">	//在根节点位置创建Trajectory组件</span><br><span class="line">	Trajectory = CreateDefaultSubobject&lt;USplineComponent&gt;(TEXT(&quot;Trajectory&quot;));</span><br><span class="line">	RootComponent = Trajectory;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="5-Car"><a href="#5-Car" class="headerlink" title="5. Car"></a>5. Car</h3><p>此类继承了Actor创建了UE4的C++类。该类定义了小车的一些基本的状态参数，同时也定义了在自动驾驶网络的训练阶段控制小车行为的一些控制变量。在UE4项目中AliceGT的蓝图类就继承自此C++类。下面给出在此类中定义的一些变量以及作用。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">变量名</th>
+<th style="text-align:center">值类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Acceleration</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">加速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Dimension</code></td>
+<td style="text-align:center">FMatrix</td>
+<td style="text-align:center">角加速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LastAppliedSteering</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">上一次输入的Steering(方向)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LastAppliedThrottle</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">上一次输入的Throttle(油门)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LastAppliedBrake</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">上一次输入的Brake(刹车)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LastAppliedHandbrake</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">上一次输入的Handbrake(手刹)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PreviousTickVelocity</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">前一帧的速度(包括X, Y, Z)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PreviousTickAngularVelocity</code></td>
+<td style="text-align:center">FVector</td>
+<td style="text-align:center">前一帧的角速度(包括X, Y, Z)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bShouldReset</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否应该重置状态</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bIsResetting</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否正在重置中</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bPreviousShouldReset</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">与bShouldReset一起控制重置</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bShouldResetPosition</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否重置小车位置</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bIsGameDriving</code></td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否是AI控制小车</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>DistanceAlongRoute</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">从样条路径起点到目前位置的距离</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>DistanceToCenterOfLane</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">当前位置到样条路径上最近点的距离</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>LapNumber</code></td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">小车行驶圈数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>WaypointStep</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">路径步长距离</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>WaypointDistanceAlongSpline</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">从样条路径起点到目前为止步长距离</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CloseDistanceThreshold</code></td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">从一个waypoint到另一个的距离阈值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>EpisodeStartTime</code></td>
+<td style="text-align:center">double</td>
+<td style="text-align:center">游戏的开始时间</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>EpisodeEndTime</code></td>
+<td style="text-align:center">double</td>
+<td style="text-align:center">游戏的结束时间，运行时访问为-1</td>
+</tr>
+</tbody>
+</table>
+<p>下面简单分析一下Car类每帧完成的工作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">void ACar::Tick(float DeltaTime)</span><br><span class="line">&#123;</span><br><span class="line">	Super::Tick(DeltaTime);</span><br><span class="line">    //由bPreviousShouldReset和bShouldReset共同控制重置</span><br><span class="line">	if(bPreviousShouldReset)</span><br><span class="line">	</span><br><span class="line">	...</span><br><span class="line">	</span><br><span class="line">	bPreviousShouldReset = bShouldReset;</span><br><span class="line">    //计算此帧小车的各种状态数据</span><br><span class="line">	FVector CurrentTickVelocity = GetVelocity();</span><br><span class="line">	FVector CurrentAngularVelocity = GetMesh() != nullptr ? </span><br><span class="line">	</span><br><span class="line">	...</span><br><span class="line"></span><br><span class="line">	PreviousTickVelocity = CurrentTickVelocity;</span><br><span class="line">	PreviousTickAngularVelocity = CurrentAngularVelocity;</span><br><span class="line">    //调用UpdateSplineProgress()函数更新当前位置与样条路径相关的信息</span><br><span class="line">	if(UpdateSplineProgress())</span><br><span class="line">	&#123;</span><br><span class="line">		if (bIsGameDriving &amp;&amp; ! IsInputEnabled)</span><br><span class="line">		&#123;</span><br><span class="line">			MoveAlongSpline();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在Car类定义的函数中，每帧将调用执行<code>UpdateSplineProgress()</code>函数，该函数主要完成的工作有获取距离当前位置最近的样条路径上的点的位置<code>ClosestSplineLocation</code>，计算最近点与当前位置的距离<code>DistanceToCenterOfLane</code>，更新小车沿着样条路径的距离<code>DistanceAlongRoute</code>以及按步长距离<code>WaypointDistanceAlongRoute</code>，并且在跑完一圈后重置距离与更新圈数<code>LapNum</code>等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">bool ACar::UpdateSplineProgress()</span><br><span class="line">&#123;</span><br><span class="line">    //检查是否有Trajectory组件，没有直接返回false</span><br><span class="line">	if (Trajectory.Get() == nullptr)</span><br><span class="line">	&#123;</span><br><span class="line">		UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;获得Tractory组件&quot;));</span><br><span class="line"></span><br><span class="line">	    ...</span><br><span class="line"></span><br><span class="line">		if (Trajectory.Get() == nullptr)</span><br><span class="line">		&#123;</span><br><span class="line">			UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;小车AI已打开但没有设置Trajectory控制运动的路线&quot;));</span><br><span class="line">			return false;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	FVector CurrentLocation = GetActorLocation();</span><br><span class="line">	//调用Trajectory内置函数计算离当前位置最近的样条路径上的点</span><br><span class="line">	auto ClosestSplineLocation = Trajectory-&gt;Trajectory-&gt;FindLocationClosestToWorldLocation(CurrentLocation, ESplineCoordinateSpace::World);</span><br><span class="line">	//计算距最近点的距离</span><br><span class="line">	DistanceToCenterOfLane = sqrt(FVector::DistSquaredXY(CurrentLocation, ClosestSplineLocation));</span><br><span class="line">	//计算沿样条路径起点的曲线距离DistanceAlongRoute，该变量在函数内被修改</span><br><span class="line">	GetDistanceAlongRouteAtLocation(CurrentLocation);</span><br><span class="line">	//步长化距离</span><br><span class="line">	WaypointDistanceAlongSpline = static_cast&lt;int&gt;(DistanceAlongRoute + WaypointStep + CloseDistanceThreshold) / static_cast&lt;int&gt;(WaypointStep) * WaypointStep;</span><br><span class="line">    //步长化距离下离路径最近点</span><br><span class="line">	FVector WaypointPosition = Trajectory-&gt;Trajectory-&gt;GetLocationAtDistanceAlongSpline(WaypointDistanceAlongSpline, ESplineCoordinateSpace::World);</span><br><span class="line">	if (FVector::Dist(WaypointPosition, CurrentLocation) &lt; CloseDistanceThreshold)</span><br><span class="line">	&#123;</span><br><span class="line">		//不要以为是以速度行驶，帧速度下才有意义</span><br><span class="line">		WaypointDistanceAlongSpline += WaypointStep;</span><br><span class="line">		auto SplineLength = Trajectory-&gt;Trajectory-&gt;GetSplineLength();</span><br><span class="line">		//如果走完一圈则重置距离</span><br><span class="line">		if (WaypointDistanceAlongSpline &gt; SplineLength)</span><br><span class="line">		&#123;</span><br><span class="line">			UE_LOG(LogTemp, Warning,</span><br><span class="line">				TEXT(&quot;绕轨全行程后在样条上重置目标点, waypoint distance : %f, spline length : %f&quot;), </span><br><span class="line">				WaypointDistanceAlongSpline, SplineLength);</span><br><span class="line"></span><br><span class="line">			WaypointDistanceAlongSpline = 0.f;</span><br><span class="line">			DistanceAlongRoute = 0.f;</span><br><span class="line">			LapNumber += 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>更细致的说明一下<code>GetDistanceAlongRouteAtLocation()</code>函数的工作原理，这相当于一个逼近的过程。由于路径为一条曲线，因此此函数利用积分思想调用<code>getDistanceAlongSplineAtLocationWithStep()</code>函数，采用步长一点一点累计逼近沿曲线的距离，在这个过程中函数计算了沿步长step运动下一个位置以及上一个位置，以及上一次计算的位置，通过比较三个位置的直线距推测小车的运动方向。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void ACar::GetDistanceAlongRouteAtLocation(FVector CurrentLocation)</span><br><span class="line">&#123;</span><br><span class="line">	//返回false表示step的增加对总长度上下一点无关紧要</span><br><span class="line">	if (!getDistanceAlongSplineAtLocationWithStep(CurrentLocation, 100, DistanceAlongRoute))</span><br><span class="line">	&#123;</span><br><span class="line">		//出发点离基点距离较大</span><br><span class="line">		getDistanceAlongSplineAtLocationWithStep(CurrentLocation, 1000, DistanceAlongRoute);</span><br><span class="line">		getDistanceAlongSplineAtLocationWithStep(CurrentLocation, 100, DistanceAlongRoute);</span><br><span class="line">	&#125;</span><br><span class="line">	//使用更小的步长获得更加精确的距离</span><br><span class="line">	getDistanceAlongSplineAtLocationWithStep(CurrentLocation, 10, DistanceAlongRoute);</span><br><span class="line">	UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;dist 100 cm %f&quot;), DistanceAlongRoute);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在使用相应的方向调用<code>searchAlongSpline()</code>函数。这个函数通过不断地比较下一目的点与当前目的点距当前点的直线距，寻找与当前点最近的目的点，同时不断逼近更新<code>DistanceAlongRoute</code>参数，直到误差小于步长，因此在<code>GetDistanceAlongRouteAtLocation()</code>函数中最后调用了一次10cm步长，以求获得更精准的路径长度</p>
+<blockquote>
+<p>很奇怪UE4中没有内置的路径长度参数，明明都有内置的<code>GetLocationAtDistanceAlongSpline()</code>函数。。。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">bool ACar::getDistanceAlongSplineAtLocationWithStep(FVector CurrentLocation, unsigned int step, float&amp; distanceAlongRoute)</span><br><span class="line">&#123;</span><br><span class="line">	//由于路径是曲线，在直线距离上比较远近，计算步长前后以及上一次在路径上的点</span><br><span class="line">	FVector prevLocation   = Trajectory-&gt;Trajectory-&gt;GetLocationAtDistanceAlongSpline(distanceAlongRoute	   , ESplineCoordinateSpace::World);</span><br><span class="line">	FVector locationAhead  = Trajectory-&gt;Trajectory-&gt;GetLocationAtDistanceAlongSpline(distanceAlongRoute + step, ESplineCoordinateSpace::World);</span><br><span class="line">	FVector locationBehind = Trajectory-&gt;Trajectory-&gt;GetLocationAtDistanceAlongSpline(distanceAlongRoute - step, ESplineCoordinateSpace::World);</span><br><span class="line"></span><br><span class="line">	float distToPrev   = FVector::Dist(CurrentLocation, prevLocation);</span><br><span class="line">	float distToAhead  = FVector::Dist(CurrentLocation, locationAhead);</span><br><span class="line">	float distToBehind = FVector::Dist(CurrentLocation, locationBehind);</span><br><span class="line">	UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;distToPrev: %f, distToAhead: %f, distToBehind %f&quot;), distToPrev, distToAhead, distToBehind);</span><br><span class="line"></span><br><span class="line">	bool found = false;</span><br><span class="line"></span><br><span class="line">	//比较离哪个点最近,以步长查找最近点</span><br><span class="line">	if (distToAhead &lt;= distToPrev &amp;&amp; distToAhead &lt;= distToBehind)</span><br><span class="line">	&#123;</span><br><span class="line">		UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;向前运动&quot;));</span><br><span class="line">		//在searchAlongSpline函数中更新DistanceAlongRoute</span><br><span class="line">		found = searchAlongSpline(CurrentLocation, step, distToAhead, distanceAlongRoute);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	...</span><br><span class="line"></span><br><span class="line">	return found;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">bool ACar::searchAlongSpline(FVector CurrentLocation, int step, float distToCurrent, float&amp; distanceAlongRoute)</span><br><span class="line">&#123;</span><br><span class="line">	int i = 0;</span><br><span class="line">	//不断地计算离CurrentLocation最近的距离点，同时更新DistanceAlongRoute</span><br><span class="line">	while (true)</span><br><span class="line">	&#123;</span><br><span class="line">		//重新计算下一个目的点距出发点的距离</span><br><span class="line">		FVector nextLocation = Trajectory-&gt;Trajectory-&gt;GetLocationAtDistanceAlongSpline(distanceAlongRoute + step, ESplineCoordinateSpace::World);</span><br><span class="line">		float distToNext = FVector::Dist(CurrentLocation, nextLocation);</span><br><span class="line">		UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;distToCurrent %f, distToNext %f, distanceAlongRoute %f, step %d&quot;), distToCurrent, distToNext, distanceAlongRoute, step);</span><br><span class="line"></span><br><span class="line">		//若沿着路径在步长直线距上查找到更远的点，说明目前点已经是最近点</span><br><span class="line">		if (distToNext &gt; distToCurrent)</span><br><span class="line">		&#123;</span><br><span class="line">			return true;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (i &gt; 9)</span><br><span class="line">		&#123;</span><br><span class="line">			//若9次后还无法判断，则放弃</span><br><span class="line">			UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;寻找了 %d 次更近的路径点 - 放弃!&quot;), i);</span><br><span class="line">			return false;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			若沿着路径在步长直线距内查找到更近的点，则距离靠近一点</span><br><span class="line">			UE_LOG(LogTemp, VeryVerbose, TEXT(&quot;沿路径更新距离: %f ,步长为 %d&quot;), distanceAlongRoute, step);</span><br><span class="line">			distToCurrent = distToNext;</span><br><span class="line">			distanceAlongRoute += step;</span><br><span class="line">		&#125;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>随后在<code>bIsGameDriving</code>以及<code>!IsInputEnabled</code>的情况下调用<code>MoveAlongSpline()</code>函数，通过计算小车行驶方向(即yaw轴)以及下一目的地的方向来调整小车的行驶方向，并且根据当前的速度调整小车Throttle。</p>
+<hr>
+<h2 id="插件内代码分析"><a href="#插件内代码分析" class="headerlink" title="插件内代码分析"></a>插件内代码分析</h2><p><img src="DA44A021C1284CB6ABD8C57D1CFF9959" alt="image">  </p>
+<p>DeepDrivePlugin是此项目沟通UE4训练环境和外部Anget决策网络的桥梁，在插件里面主要分为如图所示的6个模块，实现了多种功能包括：</p>
+<ul>
+<li>对小车状态数据以及相机图像数据的采集(Capture)</li>
+<li>对临时采集数据和线程的管理以及后处理(CaptureSink)</li>
+<li>对采集到的状态数据以及图像数据的封装(Message)</li>
+<li>外部决策网络对小车的控制(Control)</li>
+<li>UE4训练环境和决策网络的连接(Server)</li>
+<li>共享存储区的管理 (SharedMemory)   </li>
+</ul>
+<p>可以说正是DeepDrive插件完成了数据采集、数据格式化、数据通信控制的功能使得UE4能够和外部决策网络完成自动驾驶的功能。下面具体记录一下该插件各模块是如何工作的。</p>
+<h3 id="0-插件内的数据格式"><a href="#0-插件内的数据格式" class="headerlink" title="0. 插件内的数据格式"></a>0. 插件内的数据格式</h3><p>在各模块之外插件中还有两个头文件<code>DeepDriveData.h</code>和<code>DeepDriveDataType.h</code>，这两个都只有头文件而没有cpp，主要是定义了插件内部的数据格式。插件将小车的信息分为两种，一种是状态信息，一种是控制信息，状态信息用于封装起来传给决策网络，控制信息推测是从决策网络接收控制小车行驶。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">struct FDeepDriveDataOut</span><br><span class="line">&#123;</span><br><span class="line">	GENERATED_USTRUCT_BODY()</span><br><span class="line"></span><br><span class="line">	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Default)</span><br><span class="line">	FVector	Position;</span><br><span class="line"></span><br><span class="line">	...</span><br><span class="line"></span><br><span class="line">	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Default)</span><br><span class="line">	int		LapNumber;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">USTRUCT()</span><br><span class="line">struct FDeepDriveControlData</span><br><span class="line">&#123;</span><br><span class="line">	GENERATED_USTRUCT_BODY()</span><br><span class="line"></span><br><span class="line">	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Default)</span><br><span class="line">	float	Steering;</span><br><span class="line"></span><br><span class="line">	...</span><br><span class="line"></span><br><span class="line">	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Default)</span><br><span class="line">	bool	ShouldReset;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="1-Capture模块"><a href="#1-Capture模块" class="headerlink" title="1. Capture模块"></a>1. Capture模块</h3><p><img src="D3D09717B7F74D2AB78D95DD1A453FE0" alt="image">  </p>
+<p>Capture模块主要完成的功能是对UE4内部小车行驶的状态进行采集，采集的数据包括小车的各种状态信息以及摄像机组件的图像信息，它主要包含了四个部分：</p>
+<ul>
+<li>缓冲管理(CaptrueBuffer、CaptureBufferPool)</li>
+<li>实现图像采集的摄像机采集组件(CaptureCameraComponent)</li>
+<li>采集任务控制与管理(DeepDriveCapture)</li>
+<li>在UE4中进行采集行为控制的采集代理(DeepDriveCaptureProxy)  </li>
+</ul>
+<p>另外<code>CaptureJob.h</code>定义了采集任务控制与管理的基本单位——采集任务，其定义如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">struct SCaptureJob</span><br><span class="line">&#123;</span><br><span class="line">	double						timestamp;</span><br><span class="line">	int32						sequence_number = 0;</span><br><span class="line"></span><br><span class="line">	//capture_requests每个元素中存放了等待采集图像信息的相关信息</span><br><span class="line">	TArray&lt;SCaptureRequest&gt;		capture_requests;</span><br><span class="line">    </span><br><span class="line">    //用于存储图像信息的缓冲池，每个缓冲池包括多个缓冲区</span><br><span class="line">	CaptureBufferPool			*capture_buffer_pool = 0;</span><br><span class="line">	</span><br><span class="line">	//result_queue中存放了等待采集状态信息的采集任务</span><br><span class="line">	TQueue&lt;SCaptureJob*&gt;		*result_queue = 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">struct SCaptureRequest</span><br><span class="line">&#123;</span><br><span class="line">	EDeepDriveCameraType			camera_type;</span><br><span class="line">	int32							camera_id = 0;</span><br><span class="line">	FTextureRenderTargetResource	*capture_source = 0;</span><br><span class="line">	CaptureBuffer					*capture_buffer = 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>下面就以工作流程记录一下各个部分之间是如何配合工作完成信息采集的任务的。</p>
+<hr>
+<h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><p>首先从DeepDrivePlugin暴露给UE4的蓝图类<code>CaptureProxy</code>来看：</p>
+<p><img src="4D2CF2BCA4F54D5BBA9007DE51BE2704" alt="image"> <img src="9DDE615702A8454D98E710F1B6FD552A" alt="image">  </p>
+<p>该类继承自<code>DeepDriveCaptureProxy</code>,具有一个SharedMemCaptureSink组件，该组件的功能是对采集后的信息封装，以及存储到共享存储区中方便python进行访问，具体的实现在后面在进一步解释。</p>
+<p><img src="E3EC136D0A714DFEA84B9F0408079E13" alt="image">  </p>
+<p>同时该蓝图类还重写覆盖了一个函数<code>BeginCapture()</code>,详细查看该函数的实现可以看出调用此函数返回此刻小车所有的状态信息，可以在C++代码中调用此函数完成UE4蓝图类和代码间的交流。</p>
+<p>在<code>DeepDriveCaptureProxy.h</code>的<code>Tick()</code>函数中可以找到其每帧需要完成的工作，每一帧CaptureProxy都会执行两个函数并且更新当前小车状态信息，一是<code>HandleCaptureResult()</code>，这个函数对已经采集完图像信息的任务进一步采集状态信息;二是调用<code>DeepDriveCapture::Capture()</code>函数，进行采集任务的创建以及对图像数据的采集。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//每帧对采集完图像的任务进行数据采集，并且在采集间隔过后进行图像采集</span><br><span class="line">void ADeepDriveCaptureProxy::Tick( float DeltaTime )</span><br><span class="line">&#123;</span><br><span class="line">	Super::Tick( DeltaTime );</span><br><span class="line"></span><br><span class="line">	if(m_isActive)</span><br><span class="line">	&#123;</span><br><span class="line">	    //获取控制和管理采集任务的DeepDriveCapture实例</span><br><span class="line">		DeepDriveCapture &amp;deepDriveCapture = DeepDriveCapture::GetInstance();</span><br><span class="line"></span><br><span class="line">		//对采集完图像信息的任务进一步采集数据</span><br><span class="line">		deepDriveCapture.HandleCaptureResult();</span><br><span class="line"></span><br><span class="line">		if(CaptureInterval &gt;= 0.0f)</span><br><span class="line">		&#123;</span><br><span class="line">			m_TimeToNextCapture -= DeltaTime;</span><br><span class="line"></span><br><span class="line">			if(m_TimeToNextCapture &lt;= 0.0f)</span><br><span class="line">			&#123;</span><br><span class="line">				//BeginCapture的实现在UE4中的CaptureProxy蓝图类中</span><br><span class="line">				//每一次调用此函数即获取一次小车状态信息</span><br><span class="line">				m_DeepDriveData = BeginCapture();</span><br><span class="line">				//调用Capture函数采集图像信息</span><br><span class="line">				DeepDriveCapture::GetInstance().Capture();</span><br><span class="line"></span><br><span class="line">				m_TimeToNextCapture = CaptureInterval;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以看出，对信息的采集包括了两步，第一步先采集图像信息，第二步在下一帧时再采集状态信息，图像信息的采集是通过<code>DeepDriveCapture::Capture()</code>函数实现的，那么这个函数是如何进行图像采集的？看看它的源代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//进行图像采集</span><br><span class="line">void DeepDriveCapture::Capture()</span><br><span class="line">&#123;</span><br><span class="line">    //对此函数进行了一次封装</span><br><span class="line">	processCapturing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//此函数主要创建采集任务，以及初始化采集任务，并且创建线程执行每个采集任务</span><br><span class="line">//processCapturing()主要针对相机图像进行采集，状态数据采集在processFinishedJob()函数中</span><br><span class="line">void DeepDriveCapture::processCapturing()</span><br><span class="line">&#123;</span><br><span class="line">	SCaptureJob *captureJob = new SCaptureJob;</span><br><span class="line"></span><br><span class="line">	const TArray&lt; FCaptureCyle &gt; &amp;captureCycles = m_Proxy-&gt;CaptureCycles;</span><br><span class="line"></span><br><span class="line">	if (captureCycles.Num())</span><br><span class="line">	&#123;</span><br><span class="line">		//若采集周期队列不为空，则获取最近时间的相机并且添加采集任务</span><br><span class="line">		const FCaptureCyle &amp;cycle = captureCycles[m_curCycleIndex];</span><br><span class="line">    	...</span><br><span class="line">    	</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		//若采集周期队列为空，则依次使用m_CaptureComponentMap中注册的采集组件进行采集</span><br><span class="line">		//并且向当前captureJob中的请求队列中添加请求(推测一个请求队列中包含多个方向的采集请求)</span><br><span class="line">		for (auto &amp;captureCmp : m_CaptureComponentMap)</span><br><span class="line">		&#123;</span><br><span class="line">			SCaptureRequest req;</span><br><span class="line"></span><br><span class="line">			//调用组件渲染游戏图像到渲染目标并保存于当前请求数据中</span><br><span class="line">			//并且加入capture_requests队列等待从渲染目标采集图像信息</span><br><span class="line">			if (captureCmp.Value.capture_component-&gt;capture(req))</span><br><span class="line">			&#123;</span><br><span class="line">				captureJob-&gt;capture_requests.Add(req);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	...</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在游戏刚开始时，采集周期队列<code>captureCycles</code>一定为空，此时<code>DeepDriveCapture</code>就检查自己的摄像机采集组件注册映射表<code>m_CaptureComponentMap</code>，并且从中调用已注册的相机组件依次创建采集任务，然后调用组件的采集函数<code>CaptureCameraComponent::capture()</code>获取当前相机图像；然后将其加入当前任务的<code>capture_requests</code>队列中等待进一步处理。可以看出当前采集任务的<code>capture_requests</code>队列中可能存在多个采集请求，这可能是由于多方向摄像机组件造成的。</p>
+<blockquote>
+<p>实际上我并没有找到<code>CaptureCycle</code>数组是如何初始化以及添加元素的，在UE4的蓝图类中也并没有查找到关于它的引用，在C++代码中也只出现了这一次，不知道是不是BUG</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">if (captureJob-&gt;capture_requests.Num() &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		//对当前任务captureJob添加时间戳信息、队列号、完成队列以及缓冲池等信息</span><br><span class="line">		captureJob-&gt;timestamp = FPlatformTime::Seconds();</span><br><span class="line">		captureJob-&gt;sequence_number = m_nextSequenceNumber++;</span><br><span class="line">		//注意此时result_queue指向完成队列</span><br><span class="line">		captureJob-&gt;result_queue = &amp;m_FinishedJobs;</span><br><span class="line">		captureJob-&gt;capture_buffer_pool = &amp;m_CaptureBufferPool;</span><br><span class="line"></span><br><span class="line">		//此宏创建一个渲染命令任务，并且将该任务压入渲染队列，等待渲染线程执行，用于多线程渲染</span><br><span class="line">		//在当前线程中，执行采集任务并统计时间和采集任务完成数量等信息</span><br><span class="line">		// TypeName, ParamType1, ParamName1, ParamValue1, Code</span><br><span class="line">		ENQUEUE_UNIQUE_RENDER_COMMAND_ONEPARAMETER</span><br><span class="line">		(</span><br><span class="line">			ExecuteCaptureJob, SCaptureJob*, job, captureJob,</span><br><span class="line">			&#123;</span><br><span class="line">				const double before = FPlatformTime::Seconds();</span><br><span class="line">				</span><br><span class="line">				//调用此函数从渲染目标上采集图像信息</span><br><span class="line">				DeepDriveCapture::executeCaptureJob(*job);</span><br><span class="line">                </span><br><span class="line">                //更新时间信息</span><br><span class="line">				const double after = FPlatformTime::Seconds();</span><br><span class="line">			    ...</span><br><span class="line">			    </span><br><span class="line">			&#125;</span><br><span class="line">		);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><code>CaptureCameraComponent::capture()</code>函数实际上是完成的工作是渲染当前相机图像到渲染目标，为了进一步将图像信息保存，需要将渲染目标保存的图像信息采集下来，这一步的实现交给了渲染线程完成，以上代码的宏是用于创建渲染命令任务，通过每个线程调用<code>DeepDriveCapture::executeCaptureJob()</code>，将信息复制保存至缓冲区。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">//渲染线程执行采集任务，此函数主要是针对图像的采集，数据在采集在processFinishedJob()函数中</span><br><span class="line">void DeepDriveCapture::executeCaptureJob(SCaptureJob &amp;job)</span><br><span class="line">&#123;</span><br><span class="line">	for(SCaptureRequest &amp;captureReq : job.capture_requests)</span><br><span class="line">	&#123;</span><br><span class="line">		//获取采集任务中每个采集请求的渲染目标贴图</span><br><span class="line">		FRHITexture2D *texture = captureReq.capture_source-&gt;TextureRHI-&gt;GetTexture2D();</span><br><span class="line"></span><br><span class="line">		//获取渲染目标贴图的基本属性</span><br><span class="line">		EPixelFormat pixelFormat = texture-&gt;GetFormat();</span><br><span class="line">		uint32 width = texture-&gt;GetSizeX();</span><br><span class="line">		uint32 height = texture-&gt;GetSizeY();</span><br><span class="line"></span><br><span class="line">		//从贴图中获取图像信息</span><br><span class="line">		uint32 stride;</span><br><span class="line">		void *src = RHILockTexture2D(texture, 0, RLM_ReadOnly, stride, false);</span><br><span class="line"></span><br><span class="line">		//将图像信息存入缓存</span><br><span class="line">		CaptureBuffer *captureBuffer = job.capture_buffer_pool-&gt;acquire(pixelFormat, width, height, stride);</span><br><span class="line">		if(captureBuffer)</span><br><span class="line">		&#123;</span><br><span class="line">		    //复制图像信息到缓冲区</span><br><span class="line">			FMemory::BigBlockMemcpy(captureBuffer-&gt;getBuffer&lt;void&gt;(), src, captureBuffer-&gt;getBufferSize());</span><br><span class="line">		&#125;</span><br><span class="line">		RHIUnlockTexture2D(texture, 0, false);</span><br><span class="line"></span><br><span class="line">		// UE_LOG(LogDeepDriveCapture, Log, TEXT(&quot;Capturing %d x %d  %p&quot;), width, height, texture);</span><br><span class="line"></span><br><span class="line">		captureReq.capture_buffer = captureBuffer;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//将完成的任务压入完成队列</span><br><span class="line">	job.result_queue-&gt;Enqueue(&amp;job);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>DeepDriveCapture::executeCaptureJob()</code>函数获取<code>capture_request</code>数组中每个请求的渲染目标，并且通过UE4内置函数获得渲染目标的访问地址，通过内存拷贝将数据直接复制到缓冲区中，完成对图像信息的采集后将其加入<code>result_queue</code>(此时指向<code>m_FinisedJobs</code>数组)中，等待进一步和状态信息一起存入<code>SharedMemCaptureSinkComponent</code>的缓冲区中。</p>
+<p>由此，图像信息的数据已经保存至缓冲区中，但还未保存到共享存储区，并且虽然可以随时调用<code>DeepDriveCaptureProxy::BeginCapture()</code>函数获取当前小车状态信息，但也没有将此状态信息保存至缓冲区，更谈不上将信息封装。接下来再来看看<code>DeepDriveCapture::HandleCaptureResult()</code>是如何对采集图像信息后的<code>captureJob</code>进一步处理的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//对进行完图像采集的任务进一步进行状态数据采集</span><br><span class="line">void DeepDriveCapture::HandleCaptureResult()</span><br><span class="line">&#123;</span><br><span class="line">	processFinishedJobs();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">void DeepDriveCapture::processFinishedJobs()</span><br><span class="line">&#123;</span><br><span class="line">	SCaptureJob *job = 0;</span><br><span class="line">	if (	m_FinishedJobs.Dequeue(job)</span><br><span class="line">		&amp;&amp;	job != 0</span><br><span class="line">	   )</span><br><span class="line">	&#123;</span><br><span class="line">	    if(m_Proxy)</span><br><span class="line">		&#123;</span><br><span class="line">			TArray&lt;UCaptureSinkComponentBase*&gt; &amp;sinks =  m_Proxy-&gt;getSinks();</span><br><span class="line"></span><br><span class="line">			//对于当前CaptureProxy中每一个缓冲区(实际上就只有一个SharedMemCaptureSink)</span><br><span class="line">			//记录当前Job的时间戳、序列号以及采集数据</span><br><span class="line">			for(UCaptureSinkComponentBase* &amp;sink : sinks)</span><br><span class="line">			&#123;</span><br><span class="line">				sink-&gt;begin(job-&gt;timestamp, job-&gt;sequence_number, m_Proxy-&gt;getDeepDriveData());</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			//对于当前Job中的的每一个采集请求capture_requests</span><br><span class="line">			//向SharedMemCaptureSink请求相应的缓冲空间并且写入。</span><br><span class="line">			//每个capture_requests中的capture_buffer存储的是一个方向(推测)的图像信息</span><br><span class="line">			for(SCaptureRequest &amp;captureReq : job-&gt;capture_requests)</span><br><span class="line">			&#123;</span><br><span class="line">				CaptureBuffer *captureBuffer = captureReq.capture_buffer;</span><br><span class="line"></span><br><span class="line">				if(captureBuffer)</span><br><span class="line">				&#123;</span><br><span class="line">					//将图像数据写入缓冲区</span><br><span class="line">					for(UCaptureSinkComponentBase* &amp;sink : sinks)</span><br><span class="line">					&#123;</span><br><span class="line">						sink-&gt;setCaptureBuffer(captureReq.camera_id, captureReq.camera_type, *captureBuffer);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		    ...</span><br><span class="line">		    </span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	delete job;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个函数中，使用了<code>SharedMemCaptureSink</code>组件，通过<code>begin()</code>函数，首先将状态信息记录到该组件的缓冲区中，然后在对于当前采集任务中的每一个<code>capture_requests</code>提取存储在其中的图像信息，调用<code>SharedMemCaptureSinkComponent::setCaptureBuffer()</code>函数将其依次写入缓冲区，此时缓冲区里既存储了状态信息，也存储了图像信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">for(UCaptureSinkComponentBase* &amp;sink : sinks)</span><br><span class="line">&#123;</span><br><span class="line">	//将采集的数据进一步处理后清除</span><br><span class="line">	sink-&gt;flush();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//数据已经处理完，释放这部分空间</span><br><span class="line">for (SCaptureRequest &amp;captureReq : job-&gt;capture_requests)</span><br><span class="line">&#123;</span><br><span class="line">	CaptureBuffer *captureBuffer = captureReq.capture_buffer;</span><br><span class="line"></span><br><span class="line">	if (captureBuffer)</span><br><span class="line">		captureBuffer-&gt;release();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>SharedMemCaptureSinkComponent::flush()</code>在内部做了许多处理，包括调用Message模块来进行缓冲区数据的封装、以及使用SharedMemory管理共享存储区等，在完成这些操作之后，缓冲区调用<code>CaptureBuffer::release()</code>函数，将现有缓冲区释放，等待下一个采集任务。</p>
+<p>自此，一次采集任务就算完成了，从UE4内部的<code>CaptureProxy</code>开始到信息存储到<code>SharedMemory</code>中，其实还是有很多细节并没有讲明白，除了本记录并不打算深入的底层的内存管理之外，还包括:在DeepDriveCapture实例查找自己的<code>m_CaptureComponentMap</code>相机采集组件注册映射时，这些映射开始是如何被注册添加的；<code>SharedMemCaptureSinkComponent::flush()</code>是如何进一步处理这些缓冲区信息的。。。这些都或多或少牵扯到其他模块，将在分析其他模块时进一步说明这些问题。</p>
+<hr>
+<h3 id="2-Server模块"><a href="#2-Server模块" class="headerlink" title="2. Server模块"></a>2. Server模块</h3><p><img src="05D38CE9B279464080D7B5FAA1547B7E" alt="image">  </p>
+<p>server模块的主要任务是与UE4外部(决策网络)建立连接，并接受与处理来自于客户的服务请求来对UE4内部进行行为控制。它主要有以下几个部分:</p>
+<ul>
+<li>连接请求监听(DeepDriveConnectionListener)</li>
+<li>服务请求监听(DeepDriveClientConnection)</li>
+<li>消息封装以及处理(DeepDriveMessageAssembler)</li>
+<li>连接以及消息处理(DeepDriveServer)</li>
+<li>在UE4中进行连接与服务管理的代理(DeepDriveServerProxy) </li>
+</ul>
+<p>其中服务请求的甄别与处理是借助于插件内定义的消息头<code>DeepDriveMessageHeader</code>以及<code>MessageId</code>实现的，它们被定义在public文件夹下，并且派生出设置消息类、连接消息类和控制消息类：    </p>
+<p><img src="6CA77544C7324B40AC625B369BDB4387" alt="image"></p>
+<p>消息头基类的定义如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">struct MessageHeader</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">    //用于对不同的消息进行区别</span><br><span class="line">	MessageId					message_id;</span><br><span class="line">	uint32						message_size;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>下面仍以工作流程来记录Server模块是如何运行工作的。</p>
+<hr>
+<h4 id="工作流程-1"><a href="#工作流程-1" class="headerlink" title="工作流程"></a>工作流程</h4><p>首先还是从插件暴露给UE4的DeepDriveServerProxy蓝图类来看。</p>
+<p><img src="76DAA0F4ED5242489F74793ABD2CDA17" alt="image"></p>
+<p>可以发现在这个蓝图类中重写了<code>DeepDriveServerProxy.h</code>中定义的7个函数，其中<code>RegisterClient()</code>以及<code>UnregisterClient()</code>函数并未与C++代码进行互动，仅仅是在UE4内部进行了简单的输出信息等操作，其他函数也只是对小车的控制变量进行一些设置，重点我们可以关注一下<code>RegisterCamera()</code>和<code>SetAgentControlValue()</code>这两个函数。</p>
+<p>在<code>DeepDriveServerProxy.h</code>中的<code>PreInitializeCompoenents()</code>中我们可以找到在游戏刚开始的时候DepDriveProxy完成了什么工作。这个函数在<code>BeginPlay()</code>之前运行，它保证了当前世界只有一个ServerProxy被注册，并且ServerProxy比CaptureProxy先工作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//在开始前获取世界中所有的ServerProxy对象，如果没有注册的ServerProxy对象则注册当前</span><br><span class="line">//注册保证世界中只有一个ServerProxy</span><br><span class="line">void ADeepDriveServerProxy::PreInitializeComponents()</span><br><span class="line">&#123;</span><br><span class="line">	Super::PreInitializeComponents();</span><br><span class="line"></span><br><span class="line">	bool alreadyRegistered = false;</span><br><span class="line">	TArray&lt;AActor*&gt; proxies;</span><br><span class="line">	//获取当前世界中所有的DeepDriveServerProxy对象并查找是否已注册</span><br><span class="line">	UGameplayStatics::GetAllActorsOfClass(GetWorld(), TSubclassOf&lt;ADeepDriveServerProxy&gt;(), proxies );</span><br><span class="line">	for(auto &amp;actor : proxies)</span><br><span class="line">	&#123;</span><br><span class="line">		ADeepDriveServerProxy *proxy = Cast&lt;ADeepDriveServerProxy&gt; (actor);</span><br><span class="line">		if	(proxy &amp;&amp; proxy != this)</span><br><span class="line">		&#123;</span><br><span class="line">		    //如果已有注册则放弃注册</span><br><span class="line">		    if(proxy-&gt;m_isActive)</span><br><span class="line">			&#123;</span><br><span class="line">				alreadyRegistered = true;</span><br><span class="line">				UE_LOG(LogDeepDriveServerProxy, Log, TEXT(&quot;Another Server Proxy [%s] is already registered&quot;), *(proxy-&gt;GetFullName()));</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    //否则注册本代理</span><br><span class="line">	if(!alreadyRegistered)</span><br><span class="line">	&#123;</span><br><span class="line">		if(DeepDriveServer::GetInstance().RegisterProxy(*this))</span><br><span class="line">		&#123;</span><br><span class="line">			m_isActive = true;</span><br><span class="line">			UE_LOG(LogDeepDriveServerProxy, Log, TEXT(&quot;Server Proxy [%s] registered&quot;), *(GetFullName()));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在注册时调用了<code>DeepDriveServe::RegisterProxy()</code>函数进行注册，这个函数在检查代理IP地址和端口有效性后，向DeepDriveServer注册代理的同时还创建了<code>DeepDriveConnectionListener</code>的一个实例，这个实例继承自<code>FRunable</code>类，是用来监听端口是否存在连接请求的一个线程。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">//检查IP和端口后注册ServerProxy</span><br><span class="line">bool DeepDriveServer::RegisterProxy(ADeepDriveServerProxy &amp;proxy)</span><br><span class="line">&#123;</span><br><span class="line">	bool registered = false;</span><br><span class="line">	bool isValid = false;</span><br><span class="line">	int32 ipAddress[4];</span><br><span class="line"></span><br><span class="line">	TArray&lt;FString&gt; parts;</span><br><span class="line">	//检测IP地址是否有效</span><br><span class="line">	if(proxy.IPAddress.ParseIntoArray(parts, TEXT(&quot;.&quot;), 1) == 4)</span><br><span class="line">	&#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	//检测端口是否有效</span><br><span class="line">	if	(	isValid</span><br><span class="line">		&amp;&amp;	proxy.Port &gt;= 1 &amp;&amp; proxy.Port &lt;= 65535</span><br><span class="line">		)</span><br><span class="line">	&#123;</span><br><span class="line">		m_Proxy = &amp;proxy;</span><br><span class="line">		//创建线程(DeepDriveConnectionListener继承自FRunable类，是一个可执行线程)</span><br><span class="line">		//该线程持续监听端口是否有连接请求，若有则向m_IncomingConections中添加该连接请求</span><br><span class="line">		m_ConnectionListener = new DeepDriveConnectionListener(ipAddress[0], ipAddress[1], ipAddress[2], ipAddress[3], proxy.Port);</span><br><span class="line"></span><br><span class="line">		m_MessageQueue.Empty();</span><br><span class="line">		registered = true;</span><br><span class="line">	&#125;</span><br><span class="line">	return registered;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在注册完代理后，DeepDriveServerProxy每帧执行调用<code>DeepDriveServer::update()</code>函数，在这个函数中每次DeepDriveServe需要进行两步操作，首先检查自己的连接请求队列<code>m_IncomingConnections</code>，并取出一个连接请求进行处理。然后检查自己的消息队列<code>m_MessageQueue</code>，取出一条消息进行处理。连接请求队列<code>m_IncomingConnections</code>中的请求都来自于<code>DeepDriveConnenctionListener</code>线程对端口请求的监听，并且在处理每个连接请求时，DeepDriveServer都要创建一个<code>DeepDriveClientConnection</code>实例对每个连接的数据进行接收。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">void DeepDriveServer::update(float DeltaSeconds)</span><br><span class="line">&#123;</span><br><span class="line">	//从连接请求队列中取出一个连接请求处理</span><br><span class="line">	SIncomingConnection *incoming = 0;</span><br><span class="line">	if	(m_IncomingConnections.Dequeue(incoming)</span><br><span class="line">		&amp;&amp;	incoming != 0</span><br><span class="line">		)</span><br><span class="line">	&#123;</span><br><span class="line">		UE_LOG(LogDeepDriveServer, Log, TEXT(&quot;Incoming client connection from %s&quot;), *(incoming-&gt;remote_address-&gt;ToString(true)));</span><br><span class="line">		//DeepDriveClientConnection继承自FRunable,是一个可执行线程</span><br><span class="line">		//DeepDriveClientCOnnection对每一个连接的数据进行接收并且做相应处理</span><br><span class="line">		DeepDriveClientConnection *client = new DeepDriveClientConnection(incoming-&gt;socket);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//从消息队列中取出一条处理</span><br><span class="line">	deepdrive::server::MessageHeader *message = 0;</span><br><span class="line">	if	(	m_MessageQueue.Dequeue(message)</span><br><span class="line">		&amp;&amp;	message</span><br><span class="line">		)</span><br><span class="line">	&#123;</span><br><span class="line">		handleMessage(*message);</span><br><span class="line">		FMemory::Free(message);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从上可以看出来，DeepDriveServerProxy的代码被高度封装了，其中监听端口连接请求的任务被交给了在注册代理时创建的<code>DeepDriveConnectionListener</code>线程，而建立连接后对连接数据的接收工作则交给了<code>DeepDriveClientConnection</code>线程，随后使用<code>DeepDriveServer::handleMessage()</code>对接收的数据消息进行一个统一的处理。</p>
+<p>那为什么不同消息类型的消息能够统一处理呢?原来在<code>DeepDriveServer</code>的实例被创建的时候，在它的构造函数中就通过<code>bind()</code>函数将对不同消息类型进行处理的函数的句柄都保存在名为<code>m_MessageHandlers</code>的映射中，这样”高内聚，低耦合”的结构可以大大减少代码量，并且使用函数<code>handleMessage()</code>直接查找句柄映射就可以实现对各种消息进行统一的处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DeepDriveServer::DeepDriveServer()</span><br><span class="line">&#123;</span><br><span class="line">	UE_LOG(LogDeepDriveServer, Log, TEXT(&quot;DeepDriveServer created&quot;) );</span><br><span class="line"></span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::RegisterCaptureCameraRequest] = std::bind(&amp;DeepDriveServer::handleRegisterCamera, this, std::placeholders::_1);</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::RequestAgentControlRequest] = std::bind(&amp;DeepDriveServer::handleRequestAgentControl, this, std::placeholders::_1);</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::ReleaseAgentControlRequest] = std::bind(&amp;DeepDriveServer::handleReleaseAgentControl, this, std::placeholders::_1);</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::SetAgentControlValuesRequest] = std::bind(&amp;DeepDriveServer::setAgentControlValues, this, std::placeholders::_1);</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::ResetAgentRequest] = std::bind(&amp;DeepDriveServer::resetAgent, this, std::placeholders::_1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void DeepDriveServer::handleMessage(const deepdrive::server::MessageHeader &amp;message)</span><br><span class="line">&#123;</span><br><span class="line">	if (m_Proxy)</span><br><span class="line">	&#123;</span><br><span class="line">		//如果是可执行事件，则可在m_MessageHandlers映射中查找到</span><br><span class="line">		MessageHandlers::iterator fIt = m_MessageHandlers.find(message.message_id);</span><br><span class="line"></span><br><span class="line">		if (fIt != m_MessageHandlers.end())</span><br><span class="line">			fIt-&gt;second(message);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不仅在DeepDriveServer的构造函数中采用了”高内聚，低耦合”的方式统一保存函数句柄对消息进行统一处理，在对每个连接接收数据的<code>DeepDriveClientConnection</code>线程中也采取了一样的结构。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">bool DeepDriveClientConnection::Init()</span><br><span class="line">&#123;</span><br><span class="line">	//绑定函数句柄到m_MessageHandlers数组中</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::RegisterClientRequest] = std::bind(&amp;DeepDriveClientConnection::registerClient, this, std::placeholders::_1, std::placeholders::_2);</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::UnregisterClientRequest] = std::bind(&amp;DeepDriveClientConnection::unregisterClient, this, std::placeholders::_1, std::placeholders::_2);</span><br><span class="line"></span><br><span class="line">	//将DeepDriveClientConnection的消息处理函数映射都指向一个函数，该函数在isMaster为True时向DeepDriveServer的消息队列m_MessageQueue中压入该消息</span><br><span class="line">	std::function&lt;void(const deepdrive::server::MessageHeader&amp;, bool)&gt; forward2Server = [](const deepdrive::server::MessageHeader &amp;message, bool isMaster) &#123; if (isMaster) DeepDriveServer::GetInstance().enqueueMessage(message.clone()); &#125;;</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::RegisterCaptureCameraRequest] = forward2Server;</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::RequestAgentControlRequest] = forward2Server;</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::ReleaseAgentControlRequest] = forward2Server;</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::SetAgentControlValuesRequest] = forward2Server;</span><br><span class="line">	m_MessageHandlers[deepdrive::server::MessageId::ResetAgentRequest] = forward2Server;</span><br><span class="line"></span><br><span class="line">	//设置handleClientRequest函数代理</span><br><span class="line">	m_MessageAssembler.m_HandleMessage.BindRaw(this, &amp;DeepDriveClientConnection::handleClientRequest);</span><br><span class="line">	return m_Socket != 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>DeepDriveClientConnection</code>继承自<code>FRunable</code>类，因此它也是一个可执行线程，在创建线程后会自动依次调用<code>Init()</code>、<code>Run()</code>以及<code>Stop()</code>函数。在<code>Init()</code>函数中我们可以发现，除了<code>Message_Id</code>为<code>RegisterClientRequest</code>和<code>UnregisterClientRequest</code>的请求以外，它将所有其他的请求处理函数都指向了一个内联函数，这个函数检查<code>IsMaster</code>变量，并在为<code>True</code>时将此消息压入<code>DeepDriveServer::m_MessageQueue</code>中等待高层进一步处理。</p>
+<p><code>IsMaster</code>指明这个消息是否是由外部(决策网络)发送过来的服务请求，在<code>Init()</code>函数最后，为<code>DeepDriveClientConnction::handleClientRequest()</code>设置代理<code>m_MessageAssembler</code>，这使得后者可以调用直接调用此函数。</p>
+<p>在这个线程的<code>Run()</code>函数中定义了该线程执行的操作，对于每个连接，此线程检查端口分组数据并进行接收，接收的分组存在线程的<code>m_ReceiveBuffer</code>缓冲区中，并且调用<code>MessageAssembler::add()</code>函数对接收到的字节流进行进一步处理。处理完分组数据后，需要对Client返回一个响应消息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">uint32 DeepDriveClientConnection::Run()</span><br><span class="line">&#123;</span><br><span class="line">	while (!m_isStopped)</span><br><span class="line">	&#123;</span><br><span class="line">		float sleepTime = 0.01f;</span><br><span class="line">		uint32 pendingSize = 0;</span><br><span class="line">		//若端口队列中存在有效数据，则接收并写入m_MessageAssembler中</span><br><span class="line">		if (m_Socket-&gt;HasPendingData(pendingSize))</span><br><span class="line">		&#123;</span><br><span class="line">			if (pendingSize)</span><br><span class="line">			&#123;</span><br><span class="line">				if (resizeReceiveBuffer(pendingSize))</span><br><span class="line">				&#123;</span><br><span class="line">					int32 bytesRead = 0;</span><br><span class="line">					//从端口接收数据到m_ReceiveBuffer中,bytesRead指明读入了多少字节的数据</span><br><span class="line">					if (m_Socket-&gt;Recv(m_ReceiveBuffer, m_curReceiveBufferSize, bytesRead, ESocketReceiveFlags::None))</span><br><span class="line">					&#123;</span><br><span class="line">						//向m_MessageAssembler写入数据</span><br><span class="line">						// UE_LOG(LogDeepDriveClientConnection, Log, TEXT(&quot;[%d] Received %d bytes: %d&quot;), m_ClientId, bytesRead, bytesRead &gt; 4 ? *(reinterpret_cast&lt;uint32*&gt;(m_ReceiveBuffer)) : 0);</span><br><span class="line">						m_MessageAssembler.add(m_ReceiveBuffer, bytesRead);</span><br><span class="line">						sleepTime = 0.0f;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		//向Client发送响应</span><br><span class="line">		deepdrive::server::MessageHeader *response = 0;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">	shutdown();</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>DeepDriveMessageAssembler::add()</code>函数将从连接端口接收的分组再进行一次封装成<code>MessageHeader</code>，然后通过<code>CheckForMessage()</code>对封装好的消息调用代理函数依次统一进行处理。除了<code>Message_Id</code>为<code>RegisterClientRequest</code>和<code>UnregisterClientRequest</code>的请求以外,其余的消息都压入<code>DeepDriveServer::m_MessageQueue</code>中等待DeepDriveServer处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void DeepDriveMessageAssembler::add(const uint8 *data, uint32 numBytes)</span><br><span class="line">&#123;</span><br><span class="line">	if (resize(numBytes))</span><br><span class="line">	&#123;</span><br><span class="line">		//向缓冲区末尾追加数据</span><br><span class="line">		FMemory::BigBlockMemcpy(m_MessageBuffer + m_curWritePos, data, numBytes);</span><br><span class="line">		m_curWritePos += numBytes;</span><br><span class="line"></span><br><span class="line">		//将接收的字节流封装成MessageHeader(推测)</span><br><span class="line">		(void) new (m_MessageBuffer + m_curWritePos) deepdrive::server::MessageHeader(deepdrive::server::MessageId::Undefined, 0);</span><br><span class="line"></span><br><span class="line">		checkForMessage();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">void DeepDriveMessageAssembler::checkForMessage()</span><br><span class="line">&#123;</span><br><span class="line">	deepdrive::server::MessageHeader *msg = reinterpret_cast&lt;deepdrive::server::MessageHeader*&gt; (m_MessageBuffer);</span><br><span class="line"></span><br><span class="line">	uint32 readPos = 0;</span><br><span class="line"></span><br><span class="line">	//对于每一个封装好的消息执行代理函数：DeepDriveClientConnection::handleClientRequest()</span><br><span class="line">	while (msg-&gt;message_size &amp;&amp; readPos + msg-&gt;message_size &lt;= m_curWritePos)</span><br><span class="line">	&#123;</span><br><span class="line">	    //执行代理函数对封装好的消息进行统一处理</span><br><span class="line">		m_HandleMessage.Execute(*(msg));</span><br><span class="line"></span><br><span class="line">		readPos += msg-&gt;message_size;</span><br><span class="line">		msg = reinterpret_cast&lt;deepdrive::server::MessageHeader*&gt; (m_MessageBuffer + readPos);</span><br><span class="line">	&#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>自此，就阐明了Server模块执行的工作流程，并且解释了DeepDriveServer中连接请求队列<code>m_IncomingConnections</code>与消息处理队列<code>m_MessageQueue</code>元素的来源以及为何消息能够被统一处理。</p>
+<p>那在此模块中究竟处理了哪些消息？我们可以看几个重要的消息处理函数：</p>
+<ul>
+<li><strong>handleRegisterCamera()</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//为相机采集组件CaptureCameraComponent注册相机组件(在DeepDriveCapture中m_CaptureComponentMap中添加映射)</span><br><span class="line">void DeepDriveServer::handleRegisterCamera(const deepdrive::server::MessageHeader &amp;message)</span><br><span class="line">&#123;</span><br><span class="line">	if(m_Clients.Num() &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		const deepdrive::server::RegisterCaptureCameraRequest &amp;req = static_cast&lt;const deepdrive::server::RegisterCaptureCameraRequest&amp;&gt; (message);</span><br><span class="line">		DeepDriveClientConnection *client = m_Clients.Find(req.client_id)-&gt;connection;</span><br><span class="line">		if (client)</span><br><span class="line">		&#123;</span><br><span class="line">			int32 cameraId = 0;</span><br><span class="line">			if (client-&gt;isMaster())</span><br><span class="line">			&#123;</span><br><span class="line">			    //调用DeepDriveServerProxy::RegisterCamera()</span><br><span class="line">				FVector relPos(req.relative_position[0], req.relative_position[1], req.relative_position[2]);</span><br><span class="line">				FVector relRot(req.relative_rotation[0], req.relative_rotation[1], req.relative_rotation[2]);</span><br><span class="line">				cameraId = m_Proxy-&gt;RegisterCamera(req.horizontal_field_of_view, req.capture_width, req.capture_height, relPos, relRot, req.camera_label);</span><br><span class="line"></span><br><span class="line">				UE_LOG(LogDeepDriveServer, Log, TEXT(&quot;Camera registered %d %d&quot;), req.client_id, cameraId);</span><br><span class="line">			&#125;</span><br><span class="line">			...</span><br><span class="line">            //将响应压入响应队列等待发送给client</span><br><span class="line">			client-&gt;enqueueResponse(new deepdrive::server::RegisterCaptureCameraResponse(cameraId));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这个消息处理函数正好解决了我们在Capture模块遗留的一个问题：“在DeepDriveCapture实例查找自己的<code>m_CaptureComponentMap</code>相机采集组件注册映射时，这些映射开始是如何被注册添加的？”</p>
+<p><code>DeepDriveServerProxy::RegisterCamera()</code>函数在C++代码中只有定义没有实现，而在UE4中通过覆盖实现了这个函数。在<code>RegisterCamera()</code>中调用了<code>AliceGT</code>蓝图类中的<code>AddCaptureCamera()</code>函数，后者就相应的创建了一个<code>CaptureCameraCompoennt</code>类组件并且使用<code>CaptureCameraComponent::Initialize()</code>函数进行初始化，在初始化函数中调用了<code>DeepDriveCapture::RegisterCaptureComponent()</code>向<code>m_CaptureComponentMap</code>中进行了注册，以及对采集组件设置了包括渲染目标在内的各种参数。这样才使得我们能够正确的使用采集组件。</p>
+<p><img src="A14BA70EFD6A4A649F8A9E6AA34E7B53" alt="image"></p>
+<p>在调用此函数的同时用到了<code>m_Client</code>变量，这个变量的修改是在<code>DeepDriveClientConnection</code>中统一处理从已建立的连接接收和处理<code>message_id</code>为<code>RegisterClientRequest</code>数据消息时调用的处理函数<code>registerClient()</code>中,通过调用<code>DeepDriveServer::registerClient()</code>函数实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">void DeepDriveClientConnection::registerClient(const deepdrive::server::MessageHeader &amp;message, bool isMaster)</span><br><span class="line">&#123;</span><br><span class="line">	const RegisterClientRequest &amp;regClient = static_cast&lt;const RegisterClientRequest &amp;&gt; (message);</span><br><span class="line"></span><br><span class="line">	//向DeepDriveServer::m_Client添加成员</span><br><span class="line">	m_isMaster = regClient.request_master_role &gt; 0 ? true : false;</span><br><span class="line">	m_ClientId = DeepDriveServer::GetInstance().registerClient(this, m_isMaster);</span><br><span class="line"></span><br><span class="line">	UE_LOG(LogDeepDriveClientConnection, Log, TEXT(&quot;[%d] Client wants to register reqMaster %c isMaster %c&quot;), m_ClientId, regClient.request_master_role ? &apos;T&apos; : &apos;F&apos;, m_isMaster ? &apos;T&apos; : &apos;F&apos;);</span><br><span class="line"></span><br><span class="line">	//为响应设置时间戳、协议版本等属性后发送给Client</span><br><span class="line">	RegisterClientResponse response;</span><br><span class="line">	response.client_id = m_ClientId;</span><br><span class="line">	response.granted_master_role = m_isMaster ? 1 : 0;</span><br><span class="line">	</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">	m_Socket-&gt;Send(reinterpret_cast&lt;uint8*&gt; (&amp;response), sizeof(response), bytesSent);</span><br><span class="line">	// UE_LOG(LogDeepDriveClientConnection, Log, TEXT(&quot;[%d] %d bytes sent back&quot;), m_ClientId, bytesSent);</span><br><span class="line">	m_isMaster = true;</span><br><span class="line"></span><br><span class="line">	UE_LOG(LogDeepDriveClientConnection, Log, TEXT(&quot;[%d] Client registered.&quot;), m_ClientId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>setAgentControlValues()</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void DeepDriveServer::setAgentControlValues(const deepdrive::server::MessageHeader &amp;message)</span><br><span class="line">&#123;</span><br><span class="line">	if (m_Clients.Num() &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		const deepdrive::server::SetAgentControlValuesRequest &amp;req = static_cast&lt;const deepdrive::server::SetAgentControlValuesRequest&amp;&gt; (message);</span><br><span class="line">		DeepDriveClientConnection *client = m_Clients.Find(req.client_id)-&gt;connection;</span><br><span class="line">		if (client &amp;&amp; client-&gt;isMaster())</span><br><span class="line">		&#123;</span><br><span class="line">		    //调用DeepDriveServerProxy::SetControlValue()</span><br><span class="line">			m_Proxy-&gt;SetAgentControlValues(req.steering, req.throttle, req.brake, req.handbrake != 0 ? true : false);</span><br><span class="line">			// UE_LOG(LogDeepDriveServer, Log, TEXT(&quot;Control values received from %d&quot;), req.client_id);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这个函数同样在C++类中并没有实现，其实现也在UE4的DeepDriveServerProxy蓝图类中，此函数直接用决策网络返回的信息设置小车状态，这是实现外部决策网络控制小车自动驾驶的关键。</p>
+<p>其余消息处理函数的实现也基本都在UE4中DeepDriveServerProxy蓝图类中，并且实现也较为简单，在此不做过多记录。自此Server模块的分析结束。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-blog">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/16/test/" class="archive-article-date">
-  	<time datetime="2018-08-16T00:28:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/16/test/">常用MarkDown语法</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cmd-Markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/08/16/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用MarkDown语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -226,9 +780,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
