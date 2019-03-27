@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>DeepDrive示例UE4工程代码分析笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="DeepDrive示例UE4工程代码分析笔记插件外代码分析   插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：  定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs) 地图白天与黑夜时间光照控制与">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="DeepDrive示例UE4工程代码分析笔记">
 <meta property="og:url" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="DeepDrive示例UE4工程代码分析笔记插件外代码分析   插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：  定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs) 地图白天与黑夜时间光照控制与">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/4EFE973872374605B85986841CD69403">
+<meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/DeepDrive示例工程代码分析笔记/插件外层级.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/DA44A021C1284CB6ABD8C57D1CFF9959">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/D3D09717B7F74D2AB78D95DD1A453FE0">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/4D2CF2BCA4F54D5BBA9007DE51BE2704">
@@ -25,11 +25,11 @@
 <meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/6CA77544C7324B40AC625B369BDB4387">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/76DAA0F4ED5242489F74793ABD2CDA17">
 <meta property="og:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/A14BA70EFD6A4A649F8A9E6AA34E7B53">
-<meta property="og:updated_time" content="2019-03-27T09:47:23.667Z">
+<meta property="og:updated_time" content="2019-03-27T12:09:15.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="DeepDrive示例UE4工程代码分析笔记">
 <meta name="twitter:description" content="DeepDrive示例UE4工程代码分析笔记插件外代码分析   插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：  定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs) 地图白天与黑夜时间光照控制与">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/4EFE973872374605B85986841CD69403">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/27/DeepDrive示例工程代码分析笔记/DeepDrive示例工程代码分析笔记/插件外层级.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -168,9 +168,24 @@
             <article id="post-DeepDrive示例工程代码分析笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DeepDrive示例UE4工程代码分析笔记
+    </h1>
+  
+
+        
+        <a href="/2019/03/27/DeepDrive示例工程代码分析笔记/" class="archive-article-date">
+  	<time datetime="2019-03-27T12:02:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="DeepDrive示例UE4工程代码分析笔记"><a href="#DeepDrive示例UE4工程代码分析笔记" class="headerlink" title="DeepDrive示例UE4工程代码分析笔记"></a>DeepDrive示例UE4工程代码分析笔记</h1><h2 id="插件外代码分析"><a href="#插件外代码分析" class="headerlink" title="插件外代码分析"></a>插件外代码分析</h2><p><img src="4EFE973872374605B85986841CD69403" alt="image">  </p>
+        <h1 id="DeepDrive示例UE4工程代码分析笔记"><a href="#DeepDrive示例UE4工程代码分析笔记" class="headerlink" title="DeepDrive示例UE4工程代码分析笔记"></a>DeepDrive示例UE4工程代码分析笔记</h1><h2 id="插件外代码分析"><a href="#插件外代码分析" class="headerlink" title="插件外代码分析"></a>插件外代码分析</h2><p><img src="DeepDrive示例工程代码分析笔记/插件外层级.png" alt="image">  </p>
 <p>插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：</p>
 <ul>
 <li>定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs)</li>

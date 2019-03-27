@@ -155,9 +155,24 @@
     <article id="post-DeepDrive示例工程代码分析笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/27/DeepDrive示例工程代码分析笔记/">DeepDrive示例UE4工程代码分析笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/27/DeepDrive示例工程代码分析笔记/" class="archive-article-date">
+  	<time datetime="2019-03-27T12:02:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="DeepDrive示例UE4工程代码分析笔记"><a href="#DeepDrive示例UE4工程代码分析笔记" class="headerlink" title="DeepDrive示例UE4工程代码分析笔记"></a>DeepDrive示例UE4工程代码分析笔记</h1><h2 id="插件外代码分析"><a href="#插件外代码分析" class="headerlink" title="插件外代码分析"></a>插件外代码分析</h2><p><img src="4EFE973872374605B85986841CD69403" alt="image">  </p>
+        <h1 id="DeepDrive示例UE4工程代码分析笔记"><a href="#DeepDrive示例UE4工程代码分析笔记" class="headerlink" title="DeepDrive示例UE4工程代码分析笔记"></a>DeepDrive示例UE4工程代码分析笔记</h1><h2 id="插件外代码分析"><a href="#插件外代码分析" class="headerlink" title="插件外代码分析"></a>插件外代码分析</h2><p><img src="DeepDrive示例工程代码分析笔记/插件外层级.png" alt="image">  </p>
 <p>插件外代码主要是为插件提供服务的实体(AliceGT)以及定义小车在训练阶段的行为控制，从上图可以看出一共包含了5个头文件，不同的头文件或是定义了存储数据的格式，或是定义UE4的C++类对象，各类的功能大致是：</p>
 <ul>
 <li>定义摄像机数据属性以及传输给Python的信息格式(DataTransferStructs)</li>
